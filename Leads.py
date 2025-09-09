@@ -6,6 +6,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime, date, timedelta
 import base64
+import hashlib
 
 # Configuração do Google Sheets
 def get_google_sheets_data():
@@ -149,15 +150,17 @@ app.layout = html.Div([
     # Botão para recarregar dados manualmente
     html.Div([
     html.Button("Atualizar dados", id='refresh-data', n_clicks=0, style={'marginRight': '10px'}),
-    html.Button("Auto-map", id='auto-map', n_clicks=0, style={'marginRight': '10px'}),
-    html.Span(id='auto-map-result', style={'fontSize': '0.9em', 'color': '#666', 'marginRight': '10px'}),
+    #html.Button("Auto-map", id='auto-map', n_clicks=0, style={'marginRight': '10px'}),
+    #html.Span(id='auto-map-result', style={'fontSize': '0.9em', 'color': '#666', 'marginRight': '10px'}),
     html.Span(id='last-refresh', style={'fontSize': '0.9em', 'color': '#666'})
     ], style={'textAlign': 'center', 'marginBottom': '10px'}),
 
     dcc.Tabs(id="tabs", value='tab-1', children=[
-        dcc.Tab(label='Análise Geral', value='tab-1'),
-        dcc.Tab(label='Qualidade', value='tab-qualidade'),
-        dcc.Tab(label='Performance', value='tab-performance'),
+        dcc.Tab(label='Análise Geral', value='tab-1', style={'fontSize': '18px', 'fontWeight': '600'}),
+        # Qualidade tab disabled per user request
+        # dcc.Tab(label='Qualidade', value='tab-qualidade'),
+        # Performance tab disabled per user request
+        # dcc.Tab(label='Performance', value='tab-performance'),
         dcc.Tab(label='Contatos em Atraso', value='tab-2'),
     ]),
     
@@ -275,19 +278,21 @@ def create_tab2_layout():
     return html.Div([
         html.Br(),
         
-        # Configuração de dias para atraso
+        # Configuração de dias para atraso (centralizado)
         html.Div([
-            html.Label("Dias para considerar contato em atraso:"),
-            dcc.Input(
-                id='days-overdue-config',
-                type='number',
-                value=7,
-                min=1,
-                persistence=True,
-                persistence_type='session',
-                style={'marginLeft': '10px', 'width': '100px'}
-            )
-        ], style={'marginBottom': '20px'}),
+            html.Div([
+                html.Label("Dias para considerar contato em atraso:", style={'fontSize': '16px', 'fontWeight': '600', 'marginRight': '8px'}),
+                dcc.Input(
+                    id='days-overdue-config',
+                    type='number',
+                    value=7,
+                    min=1,
+                    persistence=True,
+                    persistence_type='session',
+                    style={'width': '100px', 'textAlign': 'center'}
+                )
+            ], style={'display': 'flex', 'alignItems': 'center', 'justifyContent': 'center'})
+        ], style={'marginBottom': '20px', 'textAlign': 'center'}),
 
         # Cards de contatos em atraso por consultora
         html.Div(id='overdue-cards'),
@@ -465,41 +470,176 @@ def update_summary_cards(start_date, end_date, n_clicks):
         print("Aviso: Coluna 'Consultora' não encontrada. Colunas disponíveis:", filtered_df.columns.tolist())
         por_consultora = pd.Series()  # Serie vazia
 
-    cards = [
-        # Card total de registros
-        html.Div([
-            html.H4(f"{total_registros}", style={'margin': '0', 'fontSize': '2em'}),
-            html.P("Total de Registros", style={'margin': '0'})
-        ], style={'textAlign': 'center', 'backgroundColor': '#f0f0f0', 'padding': '20px', 
-                 'borderRadius': '5px', 'margin': '10px', 'width': '200px', 'display': 'inline-block'}),
+    # Paleta pastéis (fallback)
+    pastel_palette = ['#FDEBD0', '#E8F8F5', '#F6EBF6', '#FEF9E7', '#E8F6FF', '#FFF0F5', '#FBEFF2', '#EAF8F1']
 
-        # Card positivos
-        html.Div([
-            html.H4(f"{positivos}", style={'margin': '0', 'fontSize': '2em', 'color': 'green'}),
-            html.P("Positivos", style={'margin': '0'})
-        ], style={'textAlign': 'center', 'backgroundColor': '#f0f0f0', 'padding': '20px', 
-                 'borderRadius': '5px', 'margin': '10px', 'width': '200px', 'display': 'inline-block'}),
+    # Mapeamento explícito nome -> cor (edite conforme sua preferência)
+    consultora_color_map = {
+        'Lidiane': '#DCEEFF',   # azul claro
+        'Lidiane ': '#DCEEFF',  # possível variação com espaço
+        'Jéssica': '#F6E8F6',   # rosa / lilás claro
+        'Jessica': '#F6E8F6',   # sem acento
+        # adicione outros nomes conhecidos aqui
+    }
 
-        # Card negativos
-        html.Div([
-            html.H4(f"{negativos}", style={'margin': '0', 'fontSize': '2em', 'color': 'red'}),
-            html.P("Negativos", style={'margin': '0'})
-        ], style={'textAlign': 'center', 'backgroundColor': '#f0f0f0', 'padding': '20px', 
-                 'borderRadius': '5px', 'margin': '10px', 'width': '200px', 'display': 'inline-block'})
-    ]
-    
-    # Cards por consultora
-    for consultora, count in por_consultora.items():
-        cards.append(
-            html.Div([
-                html.H4(f"{count}", style={'margin': '0', 'fontSize': '2em', 'color': 'blue'}),
-                html.P(f"{consultora}", style={'margin': '0'})
-            ], style={'textAlign': 'center', 'backgroundColor': '#f0f0f0', 'padding': '20px', 
-                     'borderRadius': '5px', 'margin': '10px', 'width': '200px', 'display': 'inline-block'})
-        )
-    
-    # centralizar cards com flexbox e permitir quebra
-    return html.Div(cards, style={'display': 'flex', 'justifyContent': 'center', 'flexWrap': 'wrap', 'gap': '10px'})
+    # função utilitária para obter cor por nome com fallback determinístico
+    def consultora_color(name: str) -> str:
+        try:
+            if not name:
+                return pastel_palette[0]
+            key = str(name).strip()
+            if key in consultora_color_map:
+                return consultora_color_map[key]
+            # fallback determinístico baseado em hash
+            idx = int(hashlib.md5(key.encode('utf-8')).hexdigest(), 16) % len(pastel_palette)
+            return pastel_palette[idx]
+        except Exception:
+            return pastel_palette[0]
+
+    # construir os cards pais (total, positivos, negativos, whatsapp, proposta)
+    total_card = html.Div([
+        html.H4(f"{total_registros}", style={'margin': '0', 'fontSize': '2em'}),
+        html.P("Total de Registros", style={'margin': '0'})
+    ], style={'textAlign': 'center', 'backgroundColor': '#f0f0f0', 'padding': '20px',
+             'borderRadius': '5px', 'margin': '0', 'width': '180px'})
+
+    pos_parent = html.Div([
+        html.H4(f"{positivos}", style={'margin': '0', 'fontSize': '2em', 'color': 'green'}),
+        html.P("Positivos", style={'margin': '0'})
+    ], style={'textAlign': 'center', 'backgroundColor': '#e8f7ea', 'padding': '20px',
+              'borderRadius': '5px', 'margin': '0', 'width': '260px'})
+
+    neg_parent = html.Div([
+        html.H4(f"{negativos}", style={'margin': '0', 'fontSize': '2em', 'color': 'red'}),
+        html.P("Negativos", style={'margin': '0'})
+    ], style={'textAlign': 'center', 'backgroundColor': '#fdecea', 'padding': '20px',
+              'borderRadius': '5px', 'margin': '0', 'width': '260px'})
+
+    whatsapp_total = 0
+    if 'Contato via wp' in filtered_df.columns:
+        whatsapp_total = filtered_df[filtered_df['Contato via wp'].astype(str).str.strip().str.lower() == 'sim'].shape[0]
+    whatsapp_parent = html.Div([
+        html.H4(f"{whatsapp_total}", style={'margin': '0', 'fontSize': '2em', 'color': '#2b8c6b'}),
+        html.P("Contatos WhatsApp", style={'margin': '0'})
+    ], style={'textAlign': 'center', 'backgroundColor': '#eefaf7', 'padding': '20px',
+              'borderRadius': '5px', 'margin': '0', 'width': '260px'})
+
+    proposta_total = 0
+    if 'Proposta' in filtered_df.columns:
+        proposta_total = filtered_df[filtered_df['Proposta'].astype(str).str.strip().str.lower() == 'sim'].shape[0]
+    proposta_parent = html.Div([
+        html.H4(f"{proposta_total}", style={'margin': '0', 'fontSize': '2em', 'color': '#6a4a9f'}),
+        html.P("Proposta", style={'margin': '0'})
+    ], style={'textAlign': 'center', 'backgroundColor': '#f3eef9', 'padding': '20px',
+              'borderRadius': '5px', 'margin': '0', 'width': '260px'})
+
+    # criar linhas de children para cada grupo
+    # POSITIVOS children
+    pos_children = []
+    if 'Positivo' in filtered_df.columns and 'Consultora' in filtered_df.columns:
+        pos_by_cons = filtered_df[filtered_df['Positivo'] == 'Sim']['Consultora'].value_counts()
+    else:
+        pos_by_cons = pd.Series()
+
+    for consultora, cnt in pos_by_cons.items():
+        bg = consultora_color(consultora)
+        pos_children.append(html.Div([
+            html.H4(f"{cnt}", style={'margin': '0', 'fontSize': '1.6em', 'color': 'black'}),
+            html.P(f"{consultora}", style={'margin': '0', 'fontSize': '0.9em'})
+        ], style={'textAlign': 'center', 'backgroundColor': bg, 'padding': '14px', 'borderRadius': '6px',
+                  'margin': '6px', 'width': '160px'}))
+
+    # NEGATIVOS children
+    neg_children = []
+    if 'Positivo' in filtered_df.columns and 'Consultora' in filtered_df.columns:
+        neg_by_cons = filtered_df[filtered_df['Positivo'] == 'Não']['Consultora'].value_counts()
+    else:
+        neg_by_cons = pd.Series()
+
+    for consultora, cnt in neg_by_cons.items():
+        bg = consultora_color(consultora)
+        neg_children.append(html.Div([
+            html.H4(f"{cnt}", style={'margin': '0', 'fontSize': '1.6em', 'color': 'black'}),
+            html.P(f"{consultora}", style={'margin': '0', 'fontSize': '0.9em'})
+        ], style={'textAlign': 'center', 'backgroundColor': bg, 'padding': '14px', 'borderRadius': '6px',
+                  'margin': '6px', 'width': '160px'}))
+
+    # WHATSAPP children
+    whatsapp_children = []
+    if 'Contato via wp' in filtered_df.columns and 'Consultora' in filtered_df.columns:
+        wp_by_cons = filtered_df[filtered_df['Contato via wp'].astype(str).str.strip().str.lower() == 'sim']['Consultora'].value_counts()
+    else:
+        wp_by_cons = pd.Series()
+
+    for consultora, cnt in wp_by_cons.items():
+        bg = consultora_color(consultora)
+        whatsapp_children.append(html.Div([
+            html.H4(f"{cnt}", style={'margin': '0', 'fontSize': '1.6em', 'color': 'black'}),
+            html.P(f"{consultora}", style={'margin': '0', 'fontSize': '0.9em'})
+        ], style={'textAlign': 'center', 'backgroundColor': bg, 'padding': '14px', 'borderRadius': '6px',
+                  'margin': '6px', 'width': '160px'}))
+
+    # PROPOSTA children
+    proposta_children = []
+    if 'Proposta' in filtered_df.columns and 'Consultora' in filtered_df.columns:
+        prop_by_cons = filtered_df[filtered_df['Proposta'].astype(str).str.strip().str.lower() == 'sim']['Consultora'].value_counts()
+    else:
+        prop_by_cons = pd.Series()
+
+    for consultora, cnt in prop_by_cons.items():
+        bg = consultora_color(consultora)
+        proposta_children.append(html.Div([
+            html.H4(f"{cnt}", style={'margin': '0', 'fontSize': '1.6em', 'color': 'black'}),
+            html.P(f"{consultora}", style={'margin': '0', 'fontSize': '0.9em'})
+        ], style={'textAlign': 'center', 'backgroundColor': bg, 'padding': '14px', 'borderRadius': '6px',
+                  'margin': '6px', 'width': '160px'}))
+
+    # TOTAL por consultora (coluna 1) - quantidade total de registros por consultora
+    total_children = []
+    if 'Consultora' in filtered_df.columns:
+        total_by_cons = filtered_df['Consultora'].value_counts()
+    else:
+        total_by_cons = pd.Series()
+
+    for consultora, cnt in total_by_cons.items():
+        bg = consultora_color(consultora)
+        total_children.append(html.Div([
+            html.H4(f"{cnt}", style={'margin': '0', 'fontSize': '1.6em', 'color': 'black'}),
+            html.P(f"{consultora}", style={'margin': '0', 'fontSize': '0.9em'})
+        ], style={'textAlign': 'center', 'backgroundColor': bg, 'padding': '14px', 'borderRadius': '6px',
+                  'margin': '6px', 'width': '160px'}))
+
+    # montar layout em colunas: cada coluna contém o card pai e, abaixo, os cards das consultoras
+    col_total = html.Div([
+        total_card,
+        html.Div(total_children, style={'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center', 'gap': '8px'})
+    ], style={'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center', 'width': '180px', 'gap': '14px'})
+
+    col_pos = html.Div([
+        pos_parent,
+        html.Div(pos_children, style={'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center', 'gap': '8px'})
+    ], style={'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center', 'width': '260px', 'gap': '14px'})
+
+    col_neg = html.Div([
+        neg_parent,
+        html.Div(neg_children, style={'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center', 'gap': '8px'})
+    ], style={'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center', 'width': '260px', 'gap': '14px'})
+
+    col_wp = html.Div([
+        whatsapp_parent,
+        html.Div(whatsapp_children, style={'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center', 'gap': '8px'})
+    ], style={'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center', 'width': '260px', 'gap': '14px'})
+
+    col_prop = html.Div([
+        proposta_parent,
+        html.Div(proposta_children, style={'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center', 'gap': '8px'})
+    ], style={'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center', 'width': '260px', 'gap': '14px'})
+
+    # linha de colunas
+    columns_row = html.Div([col_total, col_pos, col_neg, col_wp, col_prop],
+                           style={'display': 'flex', 'justifyContent': 'center', 'gap': '48px', 'width': '100%', 'marginTop': '8px'})
+
+    return html.Div(columns_row, style={'width': '100%', 'textAlign': 'center'})
 
 # Callback para gráfico de pizza
 @app.callback(
@@ -1267,14 +1407,27 @@ def update_overdue_cards(days_config, n_clicks, active_tab, selected_consultora)
     else:
         overdue_by_consultora = pd.Series()
 
+    # Paleta de cores pastéis (tons claros) para aplicar aos cards ciclicamente
+    pastel_palette = [
+        '#FDEBD0',  # pêssego claro
+        '#E8F8F5',  # menta clara
+        '#F6EBF6',  # lavanda clara
+        '#FEF9E7',  # amarelo suave
+        '#E8F6FF',  # azul claro
+        '#FFF0F5',  # rosa claro
+    ]
+
     cards = []
-    for consultora, count in overdue_by_consultora.items():
+    for idx, (consultora, count) in enumerate(overdue_by_consultora.items()):
         card_id = {'type': 'overdue-card', 'index': str(consultora)}
+        # cor de fundo baseada no índice da consultora
+        bg_color = pastel_palette[idx % len(pastel_palette)]
+
         # estilo base
-        base_style = {'backgroundColor': '#f0f0f0', 'padding': '16px', 'borderRadius': '5px',
+        base_style = {'backgroundColor': bg_color, 'padding': '16px', 'borderRadius': '5px',
                       'margin': '10px', 'width': '200px', 'display': 'inline-block', 'border': '1px solid transparent', 'cursor': 'pointer'}
 
-        # se a consultora estiver selecionada, aplicar destaque
+        # se a consultora estiver selecionada, aplicar destaque (override)
         if selected_consultora and str(consultora) == str(selected_consultora):
             highlight_style = base_style.copy()
             highlight_style.update({'backgroundColor': '#e8f4ff', 'border': '2px solid #4a90e2', 'boxShadow': '0 4px 8px rgba(74,144,226,0.15)'})
@@ -1285,9 +1438,9 @@ def update_overdue_cards(days_config, n_clicks, active_tab, selected_consultora)
         cards.append(
             html.Button([
                 html.Div([
-                    html.H4(f"{count}", style={'margin': '0', 'fontSize': '2em', 'color': 'orange'}),
-                    html.P(f"{consultora}", style={'margin': '0'}),
-                    html.P("em atraso", style={'margin': '0', 'fontSize': '0.8em'})
+                    html.H4(f"{count}", style={'margin': '0', 'fontSize': '2em', 'color': 'black'}),
+                    html.P(f"{consultora}", style={'margin': '0', 'fontSize': '2em', 'color': 'black'}),
+                    #html.P("em atraso", style={'margin': '0', 'fontSize': '0.8em'})
                 ], style={'textAlign': 'center'})
             ],
             id=card_id,
