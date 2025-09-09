@@ -1,0 +1,43 @@
+#planilha será lida somente na aba Resumo
+#layout da aba Resumo:
+	linha 1, coluna B à coluna L são os cabeçalhos
+	a partir da linha 2, coluna A à coluna L são os dados
+#dados
+	coluna A: numregistro (not null)
+	coluna B: Empresa (not null)
+	coluna C: Consultora (not null)
+	coluna D: Positivo (Sim ou Não) (not null)
+	coluna E: Contato via wp (Sim, Não ou vazio) (null)
+	coluna F: Proposta (Sim, Não ou vazio) (null)
+	coluna G: Responsável (not null)
+	coluna H: Contato (not null)
+	coluna I: Histórico (not null)
+	coluna J: Qualificado (Sim, Não ou Talvez) (not null)
+	coluna K: Nomeaba (not null)
+	coluna L: DataReferencia (data no formato dd/mm/aaaa) (not null)
+
+#no formulário:
+#nome da página "CSLeads"
+#serão 2 abas
+#aba 1:
+#filtro de data inicial e final a ser selecionado pelo usuário, trazendo sempre a data atual nos campos como padrão. este campo filtrará os registros dentro do período, filtrando pela DataReferencia dos registros
+#cards totalizando, de acordo com período selecionado:
+	registros por consultora
+	positivos e negativos
+#gráfico de pizza mostrando a qtde e percentual referente ao total do período para Qualificado = talvez, Qualificado = Não, Qualificado = Sim
+#tabela resumindo e totalizando por dia (DataReferencia) dentro do período selecionado:
+	coluna DATA: DataReferencia
+	coluna Nº contatos: qtde de contatos na data
+	Positivos: qtde de positivos na data
+	Contatos: qtde de contatos na data
+	Proposta: qtde de propostas na data
+	Sem retorno geral: qtde de contatos em atraso referente a datareferencia
+
+
+#aba 2
+#aba específica para mostrar os registros em atraso, independentemente do período selecionado na aba 1
+#campo de configuração que permita definição do número de dias para ser considerado contato em atraso (int)
+#tabela com os dados dos registros em atraso (DiasAtraso, Empresa, Consultora, Histórico) ordenando por numero de dias em atraso em ordem decrescente
+#contato em atraso é definido pela dataatual - datareferencia para Qualificado=Sim, se número de dias de atraso for igual ou maior do que dataatual - datareferencia do registro, é considerado atrasado
+#card com totalizador de contatos em atraso por Consultora
+#card com média de dias em atraso por Consultora
