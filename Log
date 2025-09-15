@@ -279,3 +279,353 @@
 2025-09-15 11:35:51.779: 127.0.0.1 - - [15/Sep/2025 08:35:51] "POST /_dash-update-component HTTP/1.1" 200 -
 2025-09-15 11:35:51.785: 127.0.0.1 - - [15/Sep/2025 08:35:51] "GET /_dash-component-suites/dash/dash_table/async-highlight.js HTTP/1.1" 304 -
 2025-09-15 11:35:51.785: 127.0.0.1 - - [15/Sep/2025 08:35:51] "GET /_dash-component-suites/dash/dash_table/async-table.js HTTP/1.1" 304 -
+2025-09-15 11:55:51.773: 127.0.0.1 - - [15/Sep/2025 08:55:51] "GET / HTTP/1.1" 200 -
+2025-09-15 11:55:52.690: 127.0.0.1 - - [15/Sep/2025 08:55:52] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-09-15 11:55:52.702: 127.0.0.1 - - [15/Sep/2025 08:55:52] "GET /_dash-layout HTTP/1.1" 200 -
+2025-09-15 11:55:53.046: 127.0.0.1 - - [15/Sep/2025 08:55:53] "GET /_favicon.ico?v=3.2.0 HTTP/1.1" 200 -
+2025-09-15 11:55:53.153: 127.0.0.1 - - [15/Sep/2025 08:55:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:55:53.555: 127.0.0.1 - - [15/Sep/2025 08:55:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:55:53.619: 127.0.0.1 - - [15/Sep/2025 08:55:53] "GET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1" 304 -
+2025-09-15 11:55:53.666: 127.0.0.1 - - [15/Sep/2025 08:55:53] "GET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1" 304 -
+2025-09-15 11:55:53.724: 127.0.0.1 - - [15/Sep/2025 08:55:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:55:53.732: 127.0.0.1 - - [15/Sep/2025 08:55:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:55:53.732: 127.0.0.1 - - [15/Sep/2025 08:55:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:55:53.882: 127.0.0.1 - - [15/Sep/2025 08:55:53] "GET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1" 304 -
+2025-09-15 11:55:53.969: 127.0.0.1 - - [15/Sep/2025 08:55:53] "GET /_dash-component-suites/dash/dash_table/async-highlight.js HTTP/1.1" 304 -
+2025-09-15 11:55:54.040: 127.0.0.1 - - [15/Sep/2025 08:55:54] "GET /_dash-component-suites/dash/dash_table/async-table.js HTTP/1.1" 304 -
+2025-09-15 11:56:01.584: 127.0.0.1 - - [15/Sep/2025 08:56:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:56:01.888: 127.0.0.1 - - [15/Sep/2025 08:56:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:56:01.970: 127.0.0.1 - - [15/Sep/2025 08:56:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:56:01.993: 127.0.0.1 - - [15/Sep/2025 08:56:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:56:02.216: 127.0.0.1 - - [15/Sep/2025 08:56:02] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:56:04.143: 127.0.0.1 - - [15/Sep/2025 08:56:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:56:04.456: 127.0.0.1 - - [15/Sep/2025 08:56:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:56:04.456: 127.0.0.1 - - [15/Sep/2025 08:56:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:56:04.524: 127.0.0.1 - - [15/Sep/2025 08:56:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:56:04.531: 127.0.0.1 - - [15/Sep/2025 08:56:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:56:04.549: 127.0.0.1 - - [15/Sep/2025 08:56:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:56:04.595: 127.0.0.1 - - [15/Sep/2025 08:56:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:56:04.809: 127.0.0.1 - - [15/Sep/2025 08:56:04] "POST /_dash-update-component HTTP/1.1" 204 -
+2025-09-15 11:56:18.426: 127.0.0.1 - - [15/Sep/2025 08:56:18] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:56:18.479: 127.0.0.1 - - [15/Sep/2025 08:56:18] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:56:18.487: 127.0.0.1 - - [15/Sep/2025 08:56:18] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:56:18.524: 127.0.0.1 - - [15/Sep/2025 08:56:18] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:57:30.381: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-09-15 11:57:30.381:  * Running on all addresses (0.0.0.0)
+2025-09-15 11:57:30.381:  * Running on http://127.0.0.1:8555
+2025-09-15 11:57:30.381:  * Running on http://192.168.0.159:8555
+2025-09-15 11:57:30.381: Press CTRL+C to quit
+2025-09-15 11:57:30.679: 127.0.0.1 - - [15/Sep/2025 08:57:30] "GET / HTTP/1.1" 200 -
+2025-09-15 11:57:30.847: 127.0.0.1 - - [15/Sep/2025 08:57:30] "GET /_dash-layout HTTP/1.1" 200 -
+2025-09-15 11:57:30.883: 127.0.0.1 - - [15/Sep/2025 08:57:30] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-09-15 11:57:31.163: 127.0.0.1 - - [15/Sep/2025 08:57:31] "GET /_favicon.ico?v=3.2.0 HTTP/1.1" 200 -
+2025-09-15 11:57:31.212: 127.0.0.1 - - [15/Sep/2025 08:57:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:57:31.565: 127.0.0.1 - - [15/Sep/2025 08:57:31] "GET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1" 304 -
+2025-09-15 11:57:31.567: 127.0.0.1 - - [15/Sep/2025 08:57:31] "GET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1" 304 -
+2025-09-15 11:57:31.577: 127.0.0.1 - - [15/Sep/2025 08:57:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:57:31.622: 127.0.0.1 - - [15/Sep/2025 08:57:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:57:31.631: [2025-09-15 08:57:31,572] ERROR in app: Exception on /_dash-update-component [POST]
+2025-09-15 11:57:31.631: Traceback (most recent call last):
+2025-09-15 11:57:31.631:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+2025-09-15 11:57:31.631:     response = self.full_dispatch_request()
+2025-09-15 11:57:31.631:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+2025-09-15 11:57:31.631:     rv = self.handle_user_exception(e)
+2025-09-15 11:57:31.631:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+2025-09-15 11:57:31.631:     rv = self.dispatch_request()
+2025-09-15 11:57:31.631:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+2025-09-15 11:57:31.631:     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+2025-09-15 11:57:31.631:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+2025-09-15 11:57:31.631:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\dash\dash.py", line 1494, in dispatch
+2025-09-15 11:57:31.631:     response_data = ctx.run(partial_func)
+2025-09-15 11:57:31.631:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\dash\_callback.py", line 688, in add_context
+2025-09-15 11:57:31.631:     raise err
+2025-09-15 11:57:31.631:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\dash\_callback.py", line 679, in add_context
+2025-09-15 11:57:31.631:     output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+2025-09-15 11:57:31.631:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\dash\_callback.py", line 59, in _invoke_callback
+2025-09-15 11:57:31.631:     return func(*args, **kwargs)  # %% callback invoked %%
+2025-09-15 11:57:31.631:   File "C:\Users\alex\Documents\Python\Leads\Leads.py", line 446, in update_summary_cards
+2025-09-15 11:57:31.631:     if 'Consultora' in filtered_df.columns:
+2025-09-15 11:57:31.631:                        ^^^^^^^^^^^
+2025-09-15 11:57:31.631: UnboundLocalError: cannot access local variable 'filtered_df' where it is not associated with a value
+2025-09-15 11:57:31.631: 127.0.0.1 - - [15/Sep/2025 08:57:31] "POST /_dash-update-component HTTP/1.1" 500 -
+2025-09-15 11:57:31.886: 127.0.0.1 - - [15/Sep/2025 08:57:31] "GET /_dash-component-suites/dash/dash_table/async-highlight.js HTTP/1.1" 304 -
+2025-09-15 11:57:31.900: 127.0.0.1 - - [15/Sep/2025 08:57:31] "GET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1" 304 -
+2025-09-15 11:57:31.903: 127.0.0.1 - - [15/Sep/2025 08:57:31] "GET /_dash-component-suites/dash/dash_table/async-table.js HTTP/1.1" 304 -
+2025-09-15 11:57:32.861: 127.0.0.1 - - [15/Sep/2025 08:57:32] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:57:43.840: 127.0.0.1 - - [15/Sep/2025 08:57:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:57:44.114: 127.0.0.1 - - [15/Sep/2025 08:57:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:57:44.167: 127.0.0.1 - - [15/Sep/2025 08:57:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:57:44.174: 127.0.0.1 - - [15/Sep/2025 08:57:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:57:44.447: 127.0.0.1 - - [15/Sep/2025 08:57:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:57:45.618: 127.0.0.1 - - [15/Sep/2025 08:57:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:57:45.938: 127.0.0.1 - - [15/Sep/2025 08:57:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:57:45.938: 127.0.0.1 - - [15/Sep/2025 08:57:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:57:45.974: 127.0.0.1 - - [15/Sep/2025 08:57:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:57:45.986: 127.0.0.1 - - [15/Sep/2025 08:57:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:57:46.009: 127.0.0.1 - - [15/Sep/2025 08:57:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:57:46.009: [2025-09-15 08:57:45,971] ERROR in app: Exception on /_dash-update-component [POST]
+2025-09-15 11:57:46.009: Traceback (most recent call last):
+2025-09-15 11:57:46.009:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+2025-09-15 11:57:46.009:     response = self.full_dispatch_request()
+2025-09-15 11:57:46.009:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+2025-09-15 11:57:46.009:     rv = self.handle_user_exception(e)
+2025-09-15 11:57:46.009:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+2025-09-15 11:57:46.009:     rv = self.dispatch_request()
+2025-09-15 11:57:46.009:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+2025-09-15 11:57:46.009:     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+2025-09-15 11:57:46.009:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+2025-09-15 11:57:46.009:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\dash\dash.py", line 1494, in dispatch
+2025-09-15 11:57:46.009:     response_data = ctx.run(partial_func)
+2025-09-15 11:57:46.009:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\dash\_callback.py", line 688, in add_context
+2025-09-15 11:57:46.009:     raise err
+2025-09-15 11:57:46.009:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\dash\_callback.py", line 679, in add_context
+2025-09-15 11:57:46.009:     output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+2025-09-15 11:57:46.009:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\dash\_callback.py", line 59, in _invoke_callback
+2025-09-15 11:57:46.009:     return func(*args, **kwargs)  # %% callback invoked %%
+2025-09-15 11:57:46.009:   File "C:\Users\alex\Documents\Python\Leads\Leads.py", line 446, in update_summary_cards
+2025-09-15 11:57:46.009:     if 'Consultora' in filtered_df.columns:
+2025-09-15 11:57:46.009:                        ^^^^^^^^^^^
+2025-09-15 11:57:46.009: UnboundLocalError: cannot access local variable 'filtered_df' where it is not associated with a value
+2025-09-15 11:57:46.009: 127.0.0.1 - - [15/Sep/2025 08:57:46] "POST /_dash-update-component HTTP/1.1" 500 -
+2025-09-15 11:57:46.266: 127.0.0.1 - - [15/Sep/2025 08:57:46] "POST /_dash-update-component HTTP/1.1" 204 -
+2025-09-15 11:59:05.074: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-09-15 11:59:05.074:  * Running on all addresses (0.0.0.0)
+2025-09-15 11:59:05.074:  * Running on http://127.0.0.1:8555
+2025-09-15 11:59:05.074:  * Running on http://192.168.0.159:8555
+2025-09-15 11:59:05.074: Press CTRL+C to quit
+2025-09-15 11:59:05.169: 127.0.0.1 - - [15/Sep/2025 08:59:05] "GET / HTTP/1.1" 200 -
+2025-09-15 11:59:05.310: 127.0.0.1 - - [15/Sep/2025 08:59:05] "GET /_dash-layout HTTP/1.1" 200 -
+2025-09-15 11:59:05.322: 127.0.0.1 - - [15/Sep/2025 08:59:05] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-09-15 11:59:05.592: 127.0.0.1 - - [15/Sep/2025 08:59:05] "GET /_favicon.ico?v=3.2.0 HTTP/1.1" 200 -
+2025-09-15 11:59:05.597: 127.0.0.1 - - [15/Sep/2025 08:59:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:59:05.662: 127.0.0.1 - - [15/Sep/2025 08:59:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:59:05.918: 127.0.0.1 - - [15/Sep/2025 08:59:05] "GET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1" 304 -
+2025-09-15 11:59:05.918: 127.0.0.1 - - [15/Sep/2025 08:59:05] "GET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1" 304 -
+2025-09-15 11:59:05.961: 127.0.0.1 - - [15/Sep/2025 08:59:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:59:05.966: [2025-09-15 08:59:05,931] ERROR in app: Exception on /_dash-update-component [POST]
+2025-09-15 11:59:05.966: Traceback (most recent call last):
+2025-09-15 11:59:05.966:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+2025-09-15 11:59:05.966:     response = self.full_dispatch_request()
+2025-09-15 11:59:05.966:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+2025-09-15 11:59:05.966:     rv = self.handle_user_exception(e)
+2025-09-15 11:59:05.966:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+2025-09-15 11:59:05.966:     rv = self.dispatch_request()
+2025-09-15 11:59:05.966:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+2025-09-15 11:59:05.966:     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+2025-09-15 11:59:05.966:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+2025-09-15 11:59:05.966:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\dash\dash.py", line 1494, in dispatch
+2025-09-15 11:59:05.966:     response_data = ctx.run(partial_func)
+2025-09-15 11:59:05.966:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\dash\_callback.py", line 688, in add_context
+2025-09-15 11:59:05.966:     raise err
+2025-09-15 11:59:05.966:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\dash\_callback.py", line 679, in add_context
+2025-09-15 11:59:05.966:     output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+2025-09-15 11:59:05.966:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\dash\_callback.py", line 59, in _invoke_callback
+2025-09-15 11:59:05.966:     return func(*args, **kwargs)  # %% callback invoked %%
+2025-09-15 11:59:05.966:   File "C:\Users\alex\Documents\Python\Leads\Leads.py", line 446, in update_summary_cards
+2025-09-15 11:59:05.966:     if 'Consultora' in filtered_df.columns:
+2025-09-15 11:59:05.966:                        ^^^^^^^^^^^
+2025-09-15 11:59:05.966: UnboundLocalError: cannot access local variable 'filtered_df' where it is not associated with a value
+2025-09-15 11:59:05.967: 127.0.0.1 - - [15/Sep/2025 08:59:05] "POST /_dash-update-component HTTP/1.1" 500 -
+2025-09-15 11:59:05.989: 127.0.0.1 - - [15/Sep/2025 08:59:05] "GET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1" 304 -
+2025-09-15 11:59:06.239: 127.0.0.1 - - [15/Sep/2025 08:59:06] "GET /_dash-component-suites/dash/dash_table/async-highlight.js HTTP/1.1" 304 -
+2025-09-15 11:59:06.239: 127.0.0.1 - - [15/Sep/2025 08:59:06] "GET /_dash-component-suites/dash/dash_table/async-table.js HTTP/1.1" 304 -
+2025-09-15 11:59:06.549: 127.0.0.1 - - [15/Sep/2025 08:59:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:59:12.426: 127.0.0.1 - - [15/Sep/2025 08:59:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:59:12.708: 127.0.0.1 - - [15/Sep/2025 08:59:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:59:12.759: 127.0.0.1 - - [15/Sep/2025 08:59:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:59:12.770: 127.0.0.1 - - [15/Sep/2025 08:59:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:59:13.058: 127.0.0.1 - - [15/Sep/2025 08:59:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:59:13.915: 127.0.0.1 - - [15/Sep/2025 08:59:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:59:14.211: 127.0.0.1 - - [15/Sep/2025 08:59:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:59:14.263: 127.0.0.1 - - [15/Sep/2025 08:59:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:59:14.299: 127.0.0.1 - - [15/Sep/2025 08:59:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:59:14.299: [2025-09-15 08:59:14,275] ERROR in app: Exception on /_dash-update-component [POST]
+2025-09-15 11:59:14.299: Traceback (most recent call last):
+2025-09-15 11:59:14.299:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+2025-09-15 11:59:14.299:     response = self.full_dispatch_request()
+2025-09-15 11:59:14.299:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+2025-09-15 11:59:14.299:     rv = self.handle_user_exception(e)
+2025-09-15 11:59:14.299:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+2025-09-15 11:59:14.299:     rv = self.dispatch_request()
+2025-09-15 11:59:14.299:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+2025-09-15 11:59:14.299:     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+2025-09-15 11:59:14.299:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+2025-09-15 11:59:14.299:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\dash\dash.py", line 1494, in dispatch
+2025-09-15 11:59:14.302:     response_data = ctx.run(partial_func)
+2025-09-15 11:59:14.302:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\dash\_callback.py", line 688, in add_context
+2025-09-15 11:59:14.302:     raise err
+2025-09-15 11:59:14.302:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\dash\_callback.py", line 679, in add_context
+2025-09-15 11:59:14.302:     output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+2025-09-15 11:59:14.302:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\dash\_callback.py", line 59, in _invoke_callback
+2025-09-15 11:59:14.302:     return func(*args, **kwargs)  # %% callback invoked %%
+2025-09-15 11:59:14.302:   File "C:\Users\alex\Documents\Python\Leads\Leads.py", line 446, in update_summary_cards
+2025-09-15 11:59:14.302:     if 'Consultora' in filtered_df.columns:
+2025-09-15 11:59:14.302:                        ^^^^^^^^^^^
+2025-09-15 11:59:14.302: UnboundLocalError: cannot access local variable 'filtered_df' where it is not associated with a value
+2025-09-15 11:59:14.302: 127.0.0.1 - - [15/Sep/2025 08:59:14] "POST /_dash-update-component HTTP/1.1" 500 -
+2025-09-15 11:59:14.587: 127.0.0.1 - - [15/Sep/2025 08:59:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:59:14.588: 127.0.0.1 - - [15/Sep/2025 08:59:14] "POST /_dash-update-component HTTP/1.1" 204 -
+2025-09-15 11:59:14.599: 127.0.0.1 - - [15/Sep/2025 08:59:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:59:21.837: 127.0.0.1 - - [15/Sep/2025 08:59:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:59:21.863: 127.0.0.1 - - [15/Sep/2025 08:59:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 11:59:21.880: [2025-09-15 08:59:21,851] ERROR in app: Exception on /_dash-update-component [POST]
+2025-09-15 11:59:21.880: Traceback (most recent call last):
+2025-09-15 11:59:21.880:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+2025-09-15 11:59:21.880:     response = self.full_dispatch_request()
+2025-09-15 11:59:21.880:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+2025-09-15 11:59:21.880:     rv = self.handle_user_exception(e)
+2025-09-15 11:59:21.880:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+2025-09-15 11:59:21.880:     rv = self.dispatch_request()
+2025-09-15 11:59:21.880:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+2025-09-15 11:59:21.880:     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+2025-09-15 11:59:21.880:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+2025-09-15 11:59:21.880:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\dash\dash.py", line 1494, in dispatch
+2025-09-15 11:59:21.880:     response_data = ctx.run(partial_func)
+2025-09-15 11:59:21.880:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\dash\_callback.py", line 688, in add_context
+2025-09-15 11:59:21.880:     raise err
+2025-09-15 11:59:21.880:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\dash\_callback.py", line 679, in add_context
+2025-09-15 11:59:21.880:     output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+2025-09-15 11:59:21.880:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\dash\_callback.py", line 59, in _invoke_callback
+2025-09-15 11:59:21.880:     return func(*args, **kwargs)  # %% callback invoked %%
+2025-09-15 11:59:21.880:   File "C:\Users\alex\Documents\Python\Leads\Leads.py", line 446, in update_summary_cards
+2025-09-15 11:59:21.880:     if 'Consultora' in filtered_df.columns:
+2025-09-15 11:59:21.880:                        ^^^^^^^^^^^
+2025-09-15 11:59:21.880: UnboundLocalError: cannot access local variable 'filtered_df' where it is not associated with a value
+2025-09-15 11:59:21.894: 127.0.0.1 - - [15/Sep/2025 08:59:21] "POST /_dash-update-component HTTP/1.1" 500 -
+2025-09-15 11:59:21.914: 127.0.0.1 - - [15/Sep/2025 08:59:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:00:50.214: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-09-15 12:00:50.215:  * Running on all addresses (0.0.0.0)
+2025-09-15 12:00:50.215:  * Running on http://127.0.0.1:8555
+2025-09-15 12:00:50.215:  * Running on http://192.168.0.159:8555
+2025-09-15 12:00:50.215: Press CTRL+C to quit
+2025-09-15 12:00:51.779: 127.0.0.1 - - [15/Sep/2025 09:00:51] "GET / HTTP/1.1" 200 -
+2025-09-15 12:00:52.214: 127.0.0.1 - - [15/Sep/2025 09:00:52] "GET /_dash-layout HTTP/1.1" 200 -
+2025-09-15 12:00:52.214: 127.0.0.1 - - [15/Sep/2025 09:00:52] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-09-15 12:00:52.548: 127.0.0.1 - - [15/Sep/2025 09:00:52] "GET /_favicon.ico?v=3.2.0 HTTP/1.1" 200 -
+2025-09-15 12:00:52.581: 127.0.0.1 - - [15/Sep/2025 09:00:52] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:00:52.812: 127.0.0.1 - - [15/Sep/2025 09:00:52] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:00:52.947: 127.0.0.1 - - [15/Sep/2025 09:00:52] "GET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1" 304 -
+2025-09-15 12:00:52.989: 127.0.0.1 - - [15/Sep/2025 09:00:52] "GET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1" 304 -
+2025-09-15 12:00:53.001: 127.0.0.1 - - [15/Sep/2025 09:00:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:00:53.001: 127.0.0.1 - - [15/Sep/2025 09:00:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:00:53.132: 127.0.0.1 - - [15/Sep/2025 09:00:53] "GET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1" 304 -
+2025-09-15 12:00:53.287: 127.0.0.1 - - [15/Sep/2025 09:00:53] "GET /_dash-component-suites/dash/dash_table/async-highlight.js HTTP/1.1" 304 -
+2025-09-15 12:00:53.308: 127.0.0.1 - - [15/Sep/2025 09:00:53] "GET /_dash-component-suites/dash/dash_table/async-table.js HTTP/1.1" 304 -
+2025-09-15 12:00:53.518: 127.0.0.1 - - [15/Sep/2025 09:00:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:01:04.273: 127.0.0.1 - - [15/Sep/2025 09:01:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:01:04.307: 127.0.0.1 - - [15/Sep/2025 09:01:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:01:04.340: 127.0.0.1 - - [15/Sep/2025 09:01:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:01:04.358: 127.0.0.1 - - [15/Sep/2025 09:01:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:03:37.786: 127.0.0.1 - - [15/Sep/2025 09:03:37] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:03:38.086: 127.0.0.1 - - [15/Sep/2025 09:03:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:03:38.166: 127.0.0.1 - - [15/Sep/2025 09:03:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:03:38.182: 127.0.0.1 - - [15/Sep/2025 09:03:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:03:38.418: 127.0.0.1 - - [15/Sep/2025 09:03:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:03:40.554: 127.0.0.1 - - [15/Sep/2025 09:03:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:03:40.865: 127.0.0.1 - - [15/Sep/2025 09:03:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:03:40.865: 127.0.0.1 - - [15/Sep/2025 09:03:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:03:40.932: 127.0.0.1 - - [15/Sep/2025 09:03:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:03:40.972: 127.0.0.1 - - [15/Sep/2025 09:03:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:03:40.977: 127.0.0.1 - - [15/Sep/2025 09:03:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:03:41.040: 127.0.0.1 - - [15/Sep/2025 09:03:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:03:41.180: 127.0.0.1 - - [15/Sep/2025 09:03:41] "POST /_dash-update-component HTTP/1.1" 204 -
+2025-09-15 12:09:24.374: Traceback (most recent call last):
+2025-09-15 12:09:24.374:   File "C:\Users\alex\Documents\Python\Leads\Leads.py", line 4, in <module>
+2025-09-15 12:09:24.374:     import pandas as pd
+2025-09-15 12:09:24.374:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\__init__.py", line 38, in <module>
+2025-09-15 12:09:24.374:     from pandas.compat import (
+2025-09-15 12:09:24.374:         is_numpy_dev as _is_numpy_dev,  # pyright: ignore[reportUnusedImport] # noqa: F401
+2025-09-15 12:09:24.374:     )
+2025-09-15 12:09:24.374:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\compat\__init__.py", line 27, in <module>
+2025-09-15 12:09:24.374:     from pandas.compat.pyarrow import (
+2025-09-15 12:09:24.374:     ...<12 lines>...
+2025-09-15 12:09:24.374:     )
+2025-09-15 12:09:24.374:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\compat\pyarrow.py", line 8, in <module>
+2025-09-15 12:09:24.374:     import pyarrow as pa
+2025-09-15 12:09:24.374:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\site-packages\pyarrow\__init__.py", line 73, in <module>
+2025-09-15 12:09:24.374:     import pyarrow.lib as _lib
+2025-09-15 12:09:24.374:   File "pyarrow\\ipc.pxi", line 1033, in init pyarrow.lib
+2025-09-15 12:09:24.374:   File "C:\Users\alex\AppData\Local\Programs\Python\Python313\Lib\collections\__init__.py", line 358, in namedtuple
+2025-09-15 12:09:24.374:     def namedtuple(typename, field_names, *, rename=False, defaults=None, module=None):
+2025-09-15 12:09:24.374:     
+2025-09-15 12:09:24.374: KeyboardInterrupt
+2025-09-15 12:09:30.146: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-09-15 12:09:30.146:  * Running on all addresses (0.0.0.0)
+2025-09-15 12:09:30.146:  * Running on http://127.0.0.1:8555
+2025-09-15 12:09:30.146:  * Running on http://192.168.0.159:8555
+2025-09-15 12:09:30.146: Press CTRL+C to quit
+2025-09-15 12:09:31.159: 127.0.0.1 - - [15/Sep/2025 09:09:31] "GET / HTTP/1.1" 200 -
+2025-09-15 12:09:31.474: 127.0.0.1 - - [15/Sep/2025 09:09:31] "GET /_dash-layout HTTP/1.1" 200 -
+2025-09-15 12:09:31.476: 127.0.0.1 - - [15/Sep/2025 09:09:31] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-09-15 12:09:31.855: 127.0.0.1 - - [15/Sep/2025 09:09:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:09:31.856: 127.0.0.1 - - [15/Sep/2025 09:09:31] "GET /_favicon.ico?v=3.2.0 HTTP/1.1" 200 -
+2025-09-15 12:09:32.120: 127.0.0.1 - - [15/Sep/2025 09:09:32] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:09:32.181: 127.0.0.1 - - [15/Sep/2025 09:09:32] "GET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1" 304 -
+2025-09-15 12:09:32.196: 127.0.0.1 - - [15/Sep/2025 09:09:32] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:09:32.206: 127.0.0.1 - - [15/Sep/2025 09:09:32] "GET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1" 304 -
+2025-09-15 12:09:32.220: 127.0.0.1 - - [15/Sep/2025 09:09:32] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:09:32.456: 127.0.0.1 - - [15/Sep/2025 09:09:32] "GET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1" 304 -
+2025-09-15 12:09:32.493: 127.0.0.1 - - [15/Sep/2025 09:09:32] "GET /_dash-component-suites/dash/dash_table/async-highlight.js HTTP/1.1" 304 -
+2025-09-15 12:09:32.532: 127.0.0.1 - - [15/Sep/2025 09:09:32] "GET /_dash-component-suites/dash/dash_table/async-table.js HTTP/1.1" 304 -
+2025-09-15 12:09:32.776: 127.0.0.1 - - [15/Sep/2025 09:09:32] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:10:14.055: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-09-15 12:10:14.055:  * Running on all addresses (0.0.0.0)
+2025-09-15 12:10:14.055:  * Running on http://127.0.0.1:8555
+2025-09-15 12:10:14.055:  * Running on http://192.168.0.159:8555
+2025-09-15 12:10:14.055: Press CTRL+C to quit
+2025-09-15 12:10:18.513: 127.0.0.1 - - [15/Sep/2025 09:10:18] "GET / HTTP/1.1" 200 -
+2025-09-15 12:10:18.597: 127.0.0.1 - - [15/Sep/2025 09:10:18] "GET /_dash-layout HTTP/1.1" 200 -
+2025-09-15 12:10:18.659: 127.0.0.1 - - [15/Sep/2025 09:10:18] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-09-15 12:10:18.923: 127.0.0.1 - - [15/Sep/2025 09:10:18] "GET /_favicon.ico?v=3.2.0 HTTP/1.1" 200 -
+2025-09-15 12:10:19.005: 127.0.0.1 - - [15/Sep/2025 09:10:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:10:19.357: 127.0.0.1 - - [15/Sep/2025 09:10:19] "GET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1" 304 -
+2025-09-15 12:10:19.357: 127.0.0.1 - - [15/Sep/2025 09:10:19] "GET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1" 304 -
+2025-09-15 12:10:19.368: 127.0.0.1 - - [15/Sep/2025 09:10:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:10:19.413: 127.0.0.1 - - [15/Sep/2025 09:10:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:10:19.416: 127.0.0.1 - - [15/Sep/2025 09:10:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:10:19.592: 127.0.0.1 - - [15/Sep/2025 09:10:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:10:19.673: 127.0.0.1 - - [15/Sep/2025 09:10:19] "GET /_dash-component-suites/dash/dash_table/async-highlight.js HTTP/1.1" 304 -
+2025-09-15 12:10:19.673: 127.0.0.1 - - [15/Sep/2025 09:10:19] "GET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1" 304 -
+2025-09-15 12:10:19.686: 127.0.0.1 - - [15/Sep/2025 09:10:19] "GET /_dash-component-suites/dash/dash_table/async-table.js HTTP/1.1" 304 -
+2025-09-15 12:11:12.334: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-09-15 12:11:12.334:  * Running on all addresses (0.0.0.0)
+2025-09-15 12:11:12.334:  * Running on http://127.0.0.1:8555
+2025-09-15 12:11:12.334:  * Running on http://192.168.0.159:8555
+2025-09-15 12:11:12.334: Press CTRL+C to quit
+2025-09-15 12:11:13.433: 127.0.0.1 - - [15/Sep/2025 09:11:13] "GET / HTTP/1.1" 200 -
+2025-09-15 12:11:13.533: 127.0.0.1 - - [15/Sep/2025 09:11:13] "GET /_dash-layout HTTP/1.1" 200 -
+2025-09-15 12:11:13.631: 127.0.0.1 - - [15/Sep/2025 09:11:13] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-09-15 12:11:13.846: 127.0.0.1 - - [15/Sep/2025 09:11:13] "GET /_favicon.ico?v=3.2.0 HTTP/1.1" 200 -
+2025-09-15 12:11:13.973: 127.0.0.1 - - [15/Sep/2025 09:11:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:11:14.311: 127.0.0.1 - - [15/Sep/2025 09:11:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:11:14.360: 127.0.0.1 - - [15/Sep/2025 09:11:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:11:14.377: 127.0.0.1 - - [15/Sep/2025 09:11:14] "GET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1" 304 -
+2025-09-15 12:11:14.379: 127.0.0.1 - - [15/Sep/2025 09:11:14] "GET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1" 304 -
+2025-09-15 12:11:14.381: 127.0.0.1 - - [15/Sep/2025 09:11:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:11:14.700: 127.0.0.1 - - [15/Sep/2025 09:11:14] "GET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1" 304 -
+2025-09-15 12:11:14.714: 127.0.0.1 - - [15/Sep/2025 09:11:14] "GET /_dash-component-suites/dash/dash_table/async-highlight.js HTTP/1.1" 304 -
+2025-09-15 12:11:15.223: 127.0.0.1 - - [15/Sep/2025 09:11:15] "GET /_dash-component-suites/dash/dash_table/async-table.js HTTP/1.1" 304 -
+2025-09-15 12:11:16.406: 127.0.0.1 - - [15/Sep/2025 09:11:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:11:51.881: 127.0.0.1 - - [15/Sep/2025 09:11:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:11:51.916: 127.0.0.1 - - [15/Sep/2025 09:11:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:11:51.954: 127.0.0.1 - - [15/Sep/2025 09:11:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:11:51.960: 127.0.0.1 - - [15/Sep/2025 09:11:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:15:52.499: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-09-15 12:15:52.499:  * Running on all addresses (0.0.0.0)
+2025-09-15 12:15:52.499:  * Running on http://127.0.0.1:8555
+2025-09-15 12:15:52.499:  * Running on http://192.168.0.159:8555
+2025-09-15 12:15:52.499: Press CTRL+C to quit
+2025-09-15 12:15:55.339: 127.0.0.1 - - [15/Sep/2025 09:15:55] "GET / HTTP/1.1" 200 -
+2025-09-15 12:15:55.732: 127.0.0.1 - - [15/Sep/2025 09:15:55] "GET /_dash-layout HTTP/1.1" 200 -
+2025-09-15 12:15:55.733: 127.0.0.1 - - [15/Sep/2025 09:15:55] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-09-15 12:15:56.057: 127.0.0.1 - - [15/Sep/2025 09:15:56] "GET /_favicon.ico?v=3.2.0 HTTP/1.1" 200 -
+2025-09-15 12:15:56.099: 127.0.0.1 - - [15/Sep/2025 09:15:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:15:56.321: 127.0.0.1 - - [15/Sep/2025 09:15:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:15:56.439: 127.0.0.1 - - [15/Sep/2025 09:15:56] "GET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1" 304 -
+2025-09-15 12:15:56.439: 127.0.0.1 - - [15/Sep/2025 09:15:56] "GET /_dash-component-suites/dash/dcc/async-datepicker.js HTTP/1.1" 304 -
+2025-09-15 12:15:56.518: 127.0.0.1 - - [15/Sep/2025 09:15:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:15:56.520: 127.0.0.1 - - [15/Sep/2025 09:15:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2025-09-15 12:15:56.685: 127.0.0.1 - - [15/Sep/2025 09:15:56] "GET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1" 304 -
+2025-09-15 12:15:56.753: 127.0.0.1 - - [15/Sep/2025 09:15:56] "GET /_dash-component-suites/dash/dash_table/async-highlight.js HTTP/1.1" 304 -
+2025-09-15 12:15:56.760: 127.0.0.1 - - [15/Sep/2025 09:15:56] "GET /_dash-component-suites/dash/dash_table/async-table.js HTTP/1.1" 304 -
+2025-09-15 12:15:57.144: 127.0.0.1 - - [15/Sep/2025 09:15:57] "POST /_dash-update-component HTTP/1.1" 200 -

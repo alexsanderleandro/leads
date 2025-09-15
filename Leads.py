@@ -458,6 +458,44 @@ def update_summary_cards(start_date, end_date, n_clicks):
     else:
         filtered_df = pd.DataFrame()
 
+    # Registros sem consultora definida
+    if 'Consultora' in filtered_df.columns:
+        sem_consultora_df = filtered_df[filtered_df['Consultora'].isna() | (filtered_df['Consultora'].astype(str).str.strip() == '')]
+    else:
+        sem_consultora_df = pd.DataFrame()
+
+    total_sem_consultora = len(sem_consultora_df)
+
+    # Agrupar por DataReferencia e contar, ordenando por data crescente
+    if not sem_consultora_df.empty and 'DataReferencia' in sem_consultora_df.columns:
+        # Agrupa por DataReferencia (datetime), ordena crescente
+        sem_consultora_group = sem_consultora_df.groupby(sem_consultora_df['DataReferencia']).size().sort_index()
+        tooltip_lines = [f"{dt.strftime('%d/%m/%Y')}: {qtde}" for dt, qtde in sem_consultora_group.items()]
+        tooltip_text = '\n'.join(tooltip_lines)
+    else:
+        tooltip_text = "Nenhum registro sem consultora no período."
+
+    sem_consultora_card = html.Div([
+        html.H4(f"{total_sem_consultora}", style={'margin': '0', 'fontSize': '2em', 'color': '#333'}),
+        html.P("Sem consultora", style={'margin': '0'})
+    ], style={'textAlign': 'center', 'backgroundColor': "#f56e5f", 'padding': '20px',
+              'borderRadius': '5px', 'margin': '0', 'width': '180px'}, title=tooltip_text)
+    if not start_date or not end_date:
+        return html.Div()
+
+    # Converter inputs de data para datetime
+    try:
+        start = pd.to_datetime(start_date)
+        end = pd.to_datetime(end_date)
+    except Exception:
+        return html.Div()
+
+    # Filtrar dados por período
+    if 'DataReferencia' in df.columns:
+        filtered_df = df[(df['DataReferencia'] >= start) & (df['DataReferencia'] <= end)]
+    else:
+        filtered_df = pd.DataFrame()
+
     # Calcular métricas
     total_registros = len(filtered_df)
     positivos = len(filtered_df[filtered_df['Positivo'] == 'Sim']) if 'Positivo' in filtered_df.columns else 0
@@ -499,7 +537,7 @@ def update_summary_cards(start_date, end_date, n_clicks):
     # construir os cards pais (total, positivos, negativos, whatsapp, proposta)
     total_card = html.Div([
         html.H4(f"{total_registros}", style={'margin': '0', 'fontSize': '2em'}),
-        html.P("Total de Registros", style={'margin': '0'})
+        html.P("Total de registros", style={'margin': '0'})
     ], style={'textAlign': 'center', 'backgroundColor': '#f0f0f0', 'padding': '20px',
              'borderRadius': '5px', 'margin': '0', 'width': '180px'})
 
@@ -610,6 +648,10 @@ def update_summary_cards(start_date, end_date, n_clicks):
                   'margin': '6px', 'width': '160px'}))
 
     # montar layout em colunas: cada coluna contém o card pai e, abaixo, os cards das consultoras
+    col_sem_consultora = html.Div([
+        sem_consultora_card
+    ], style={'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center', 'width': '180px', 'gap': '14px'})
+
     col_total = html.Div([
         total_card,
         html.Div(total_children, style={'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center', 'gap': '8px'})
@@ -636,10 +678,10 @@ def update_summary_cards(start_date, end_date, n_clicks):
     ], style={'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center', 'width': '260px', 'gap': '14px'})
 
     # linha de colunas
-    columns_row = html.Div([col_total, col_pos, col_neg, col_wp, col_prop],
+    columns_row = html.Div([col_sem_consultora, col_total, col_pos, col_neg, col_wp, col_prop],
                            style={'display': 'flex', 'justifyContent': 'center', 'gap': '48px', 'width': '100%', 'marginTop': '8px'})
 
-    return html.Div(columns_row, style={'width': '100%', 'textAlign': 'center'})
+    return columns_row
 
 # Callback para gráfico de pizza
 @app.callback(
