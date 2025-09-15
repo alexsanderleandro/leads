@@ -1548,4 +1548,4 @@ def refresh_data(n_clicks):
 
 if __name__ == '__main__':
     # Rodar o servidor em host e porta especificados
-    app.run(host='127.0.0.1', port=8555, debug=False, dev_tools_hot_reload=False, use_reloader=False)
+    app.run(host='0.0.0.0', port=8555, debug=False, dev_tools_hot_reload=False, use_reloader=False)
