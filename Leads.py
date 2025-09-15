@@ -678,8 +678,14 @@ def update_summary_cards(start_date, end_date, n_clicks):
     ], style={'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center', 'width': '260px', 'gap': '14px'})
 
     # linha de colunas
-    columns_row = html.Div([col_sem_consultora, col_total, col_pos, col_neg, col_wp, col_prop],
-                           style={'display': 'flex', 'justifyContent': 'center', 'gap': '48px', 'width': '100%', 'marginTop': '8px'})
+    columns_row = html.Div([
+        col_sem_consultora,
+        col_total,
+        col_pos,
+        col_wp,
+        col_prop,
+        col_neg
+    ], style={'display': 'flex', 'justifyContent': 'center', 'gap': '48px', 'width': '100%', 'marginTop': '8px'})
 
     return columns_row
 
